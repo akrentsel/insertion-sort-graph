@@ -47,8 +47,12 @@ def insertion_sort_step_generator(ls):
 			yield ls, curr
 	yield ls, len(ls) - 1
 
+number_of_elements_in_list = 25 # Change this number to change the number of elements in the list to be sorted
+
 rand_ls = []
-for _ in range(25):
+for _ in range(number_of_elements_in_list):
 	rand_ls += [random.randrange(1, 200)]
+
+# rand_ls = [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]        # Worst case senario - reverse order given. θ(n^2)
 
 plot_cont(insertion_sort_step_generator(rand_ls))
