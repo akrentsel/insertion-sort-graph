@@ -31,47 +31,47 @@ We start with a list of numbers:
 
 [5, 3, 6, 2, 1]
 
-First, we look at the first item (denoted by ^) and compare it to its left neighbor.
+First, we look at the first item (denoted by **bold**) and compare it to its left neighbor.
 
 [**5**, 3, 6, 2, 1] <br>
- ^
+ 
 
 In this case, the first element has no left neighbor, so it is automatically in the right place.
 Then we look at the next element, and compare it to the previous element. 
 
 [5, **3**, 6, 2, 1]<br>
-    ^
 
-5 is greater than 3, so we remember the point that we were at (denoted by *) so we can return later, and swap.
+
+5 is greater than 3, so we remember the point that we were at (denoted by *italics*) so we can return later, and swap.
 
 [**3**, *5*, 6, 2, 1] <br>
- ^	*
+ 
 
  There is no element to the left of 3, so that part of the list ([3, 5]) is now in "local" order. So we return to our saved position and move on to the next element.
 
  [3, 5, **6**, 2, 1]<br>
-        ^
+
 
 6 is geater than 5, so we have nothing to move.
 
 [3, 4, 6, **2**, 1]<br>
-          ^
+
 
 2 is less than 6, so we need to swap. We mark the location and begin swapping. 
 
 [3, 4, **2**, _6_, 1]<br>
-   	   ^  *
+
 
 [3, **2**, 4, _6_, 1]<br>
-   	^     *
+
 
 [**2**, 3, 4, *6*, 1]<br>
- ^ 	      *
+
 
  We get to the end, jump back to the pointer + 1, and repeat the process with 1.
 
 [2, 3, 4, **1**, *6*]<br>
-          ^  *
+
 
 ...
 
