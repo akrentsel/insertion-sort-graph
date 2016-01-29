@@ -9,7 +9,7 @@ An important point to note is that once we hit an element in our iteration that 
 
 # Runtime
 
-The worst case is O(N^2)
+The worst case is O(n^2)
 
 This happens if we are given a list to sort that is in reverse order.
 
@@ -19,9 +19,9 @@ Then, we have to move the element through the entire "locally sorted" section of
 
 swaps to sort the list, which is O(n^2) runtime.
 
-In the best case, if the list is already sorted, we get O(n^2) runtime.
+In the best case, if the list is already sorted, we get O(n) runtime.
 
-For a random set of data, this isn't the fastest sort, but it is a good sort to choose if we are given a list that is "almost" sorted. Then we have runtime near O(N). A list is "almost sorted" is it needs a relatively small number of swaps to become in sorted order.
+For a random set of data, this isn't the fastest sort, but it is a good sort to choose if we are given a list that is "almost" sorted. Then we have runtime near O(n). A list is "almost sorted" is it needs a relatively small number of swaps to become in sorted order.
 
 # Example
 
