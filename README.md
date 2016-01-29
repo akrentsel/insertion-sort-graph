@@ -39,38 +39,38 @@ First, we look at the first item (denoted by ^) and compare it to its left neigh
 In this case, the first element has no left neighbor, so it is automatically in the right place.
 Then we look at the next element, and compare it to the previous element. 
 
-[5, 3, 6, 2, 1]
+[5, 3, 6, 2, 1]<br>
     ^
 
 5 is greater than 3, so we remember the point that we were at (denoted by *) so we can return later, and swap.
 
-[3, 5, 6, 2, 1]
+[3, 5, 6, 2, 1] <br>
  ^	*
 
  There is no element to the left of 3, so that part of the list ([3, 5]) is now in "local" order. So we return to our saved position and move on to the next element.
 
- [3, 5, 6, 2, 1]
+ [3, 5, 6, 2, 1]<br>
         ^
 
 6 is geater than 5, so we have nothing to move.
 
-[3, 4, 6, 2, 1]
+[3, 4, 6, 2, 1]<br>
           ^
 
 2 is less than 6, so we need to swap. We mark the location and begin swapping. 
 
-[3, 4, 2, 6, 1]
+[3, 4, 2, 6, 1]<br>
    	   ^  *
 
-[3, 2, 4, 6, 1]
+[3, 2, 4, 6, 1]<br>
    	^     *
 
-[2, 3, 4, 6, 1]
+[2, 3, 4, 6, 1]<br>
  ^ 	      *
 
  We get to the end, jump back to the pointer + 1, and repeat the process with 1.
 
-[2, 3, 4, 1, 6]
+[2, 3, 4, 1, 6]<br>
           ^  *
 
 ...
