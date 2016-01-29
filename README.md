@@ -33,7 +33,7 @@ We start with a list of numbers:
 
 First, we look at the first item (denoted by ^) and compare it to its left neighbor.
 
-[5, 3, 6, 2, 1]
+[5, 3, 6, 2, 1] <br>
  ^
 
 In this case, the first element has no left neighbor, so it is automatically in the right place.
